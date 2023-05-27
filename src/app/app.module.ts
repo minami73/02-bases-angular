@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//Conforme vayamos teniendo más componentes, no es buena idea agruparlos en un solo lugar
+import { CounterModule } from './counter/counter.module';
+
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
+import { HeroesModule } from './heroes/heroes.module';
+
 
 @NgModule({
     declarations: [
         AppComponent,
-        CounterComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        CounterModule,
+        HeroesModule
     ],
     providers: [],
     bootstrap: [AppComponent]
