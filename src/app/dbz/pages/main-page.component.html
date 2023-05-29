@@ -1,0 +1,19 @@
+<h1>DBZ Personajes</h1>
+<hr />
+
+<div class="row">
+    <!-- Una vez utilizado el @Input, aqui ya tenemos acceso a la info -->
+    <!-- El padre (main) le pasa a su hijo (dbz-list) la info -->
+
+    <div class="col">
+        <!-- [hijo]="padre" -->
+        <dbz-list
+            [characterList]="characters"
+            (onDelete)="onDeleteCharacter($event)"></dbz-list>
+    </div>
+
+    <div class="col">
+        <dbz-add-character
+            (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    </div>
+</div>
